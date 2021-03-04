@@ -19,7 +19,7 @@ class CarInterface(CarInterfaceBase):
     self.buttonStatesPrev = BUTTON_STATES.copy()
 
     # Set up an alias to PT/CAM parser for ACC depending on its detected network location
-    self.cp_acc = self.cp if CP.networkLocation == NWL.fwdCamera else self.cp_cam
+    self.cp_acc = self.cp if CP.networkLocation == NWL.gateway else self.cp_cam
 
     # timebomb_counter mod
     self.timebomb_counter = 0
